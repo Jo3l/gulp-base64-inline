@@ -42,7 +42,7 @@ module.exports = function (givenImagesPath) {
 
             var fileBase64 = new Buffer(fileData).toString('base64');
             var fileMime = mime.lookup(imagePath);
-            return 'url(data:' + fileMime  + ';base64,' + fileBase64 + ')';
+            return 'data:' + fileMime  + ';base64,' + fileBase64;
         }
 
         // check if file.contents is a `Buffer`
